@@ -1,0 +1,16 @@
+class TravelBlog:
+    total_blogs = 0
+
+tb1 = TravelBlog()
+tb1.name = 'Франция'
+tb1.days = 6
+TravelBlog.total_blogs += 1
+
+tb2 = TravelBlog()
+tb2.name = 'Италия'
+tb2.days = 5
+TravelBlog.total_blogs += 1
+
+print(TravelBlog.total_blogs)
+print(tb1.name, tb1.days)
+print(tb2.name, tb2.days)
