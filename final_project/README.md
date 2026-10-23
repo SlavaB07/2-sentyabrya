@@ -32,6 +32,7 @@
 
 ## 📁 Структура проекта
 
+```text
 final_project/
 ├── src/
 │   ├── http/           # Парсинг, сериализация, модели данных
@@ -46,7 +47,7 @@ final_project/
 
 🛠️ Технологии
 Python 3.10+
-socket, ssl (для HTTPS — бонус, не реализовано)
+socket, ssl (для HTTPS — бонус)
 threading (многопоточность)
 tkinter (GUI)
 pytest (тесты)
