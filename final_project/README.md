@@ -31,8 +31,6 @@
 - Вкладка **«Сервер»**: поле порта, кнопки «Запустить»/«Остановить», индикатор состояния, лог запросов, кнопка «Открыть в браузере».
 
 ## 📁 Структура проекта
-
-```text
 final_project/
 ├── src/
 │   ├── http/           # Парсинг, сериализация, модели данных
@@ -46,15 +44,10 @@ final_project/
 └── README.md
 🛠️ Технологии
 Python 3.10+
-
-socket, ssl (для HTTPS — бонус)
-
+socket, ssl (для HTTPS — бонус, не реализовано)
 threading (многопоточность)
-
 tkinter (GUI)
-
 pytest (тесты)
-
 flake8, pylint (линтеры)
 
 🚦 Запуск
@@ -76,9 +69,9 @@ python -m src.main &
 curl -v http://localhost:8080/
 curl -v -X POST -d "hello" http://localhost:8080/echo
 curl -v http://localhost:8080/status/418
+
 🧪 Тесты
 12 unit- и интеграционных тестов.
-
 Все тесты проходят (pytest tests/ -v).
 
 📝 Лицензия
