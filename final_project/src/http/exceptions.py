@@ -11,7 +11,7 @@
 class HttpProjectError(Exception):
     """
     Базовое исключение для всего проекта.
-    
+
     Все наши кастомные ошибки будут наследоваться от него.
     Это удобно: можно ловить все наши ошибки одной строкой:
         except HttpProjectError:
@@ -22,7 +22,7 @@ class HttpProjectError(Exception):
 class ParseError(HttpProjectError):
     """
     Ошибка парсинга.
-    
+
     Бросаем, когда:
     - URL невалидный (нет схемы, пустой хост, кривой порт).
     - HTTP-запрос/ответ не соответствует формату.
@@ -34,7 +34,7 @@ class ParseError(HttpProjectError):
 class ConnectionError(HttpProjectError):
     """
     Ошибка сетевого соединения.
-    
+
     Бросаем, когда:
     - Не удалось подключиться к хосту (сервер недоступен).
     - Соединение разорвалось во время чтения.
@@ -45,7 +45,7 @@ class ConnectionError(HttpProjectError):
 class TimeoutError(HttpProjectError):
     """
     Ошибка таймаута.
-    
+
     Бросаем, когда:
     - Сервер не ответил за отведённое время.
     - Чтение данных заняло слишком долго.
@@ -56,18 +56,18 @@ class TimeoutError(HttpProjectError):
 class HttpError(HttpProjectError):
     """
     HTTP-ошибка (сервер ответил статусом 4xx или 5xx).
-    
+
     Атрибуты:
     - status: код ответа (например, 404, 500).
     - message: текстовое описание ошибки.
-    
+
     Пример использования:
         try:
             client.get("http://example.com/missing")
         except HttpError as e:
             print(f"Сервер вернул {e.status}: {e.message}")
     """
-    
+
     def __init__(self, status: int, message: str = ""):
         self.status = status
         self.message = message

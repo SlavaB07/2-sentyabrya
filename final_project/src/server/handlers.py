@@ -61,7 +61,7 @@ def handle_status(req: Request) -> Response:
         code = int(parts[-1])
     except (ValueError, IndexError):
         code = 400
-    
+
     return Response.from_status(code, body=f"Status {code}".encode("utf-8"))
 
 
