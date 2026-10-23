@@ -47,7 +47,7 @@ final_project/
 🛠️ Технологии
 Python 3.10+
 
-socket, ssl (для HTTPS — бонус, не реализовано)
+socket, ssl (для HTTPS — бонус)
 
 threading (многопоточность)
 
